@@ -20,6 +20,24 @@ def calculate_score(cards):
     return sum(cards)
 
 
+def compare(user_score, computer_score):
+
+    if user_score == computer_score:
+        return "draw"
+    elif computer_score == 0:
+        return "you lose, opponent has blackjack"
+    elif user_score == 0:
+        return "you win"
+    elif user_score > 21:
+        return "you went over, you lose"
+    elif computer_score > 21:
+        return "opponent went over, you win"
+    elif user_score > computer_score:
+        return "you win"
+    else:
+        return "you lost"
+
+
 """creating empty list for us and computer to store the card values"""
 
 
